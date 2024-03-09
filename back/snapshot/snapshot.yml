@@ -1,0 +1,2994 @@
+version: 1
+directus: 12.1.2
+vendor: postgres
+collections:
+  - collection: action
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: action
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: sort
+      translations: null
+      unarchive_value: draft
+    schema:
+      name: action
+  - collection: product
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: product
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: sort
+      translations: null
+      unarchive_value: draft
+    schema:
+      name: product
+  - collection: warehouse
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: warehouse
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: sort
+      translations: null
+      unarchive_value: draft
+    schema:
+      name: warehouse
+  - collection: warehouse_directus_users
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: warehouse_directus_users
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: warehouse_directus_users
+  - collection: warehouse_directus_users_1
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: warehouse_directus_users_1
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: warehouse_directus_users_1
+  - collection: warehouse_directus_users_2
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: warehouse_directus_users_2
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: warehouse_directus_users_2
+  - collection: warehouse_product
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: warehouse_product
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: warehouse_product
+fields:
+  - collection: action
+    field: date_created
+    type: timestamp
+    meta:
+      collection: action
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 5
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: action
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: action
+    field: date_updated
+    type: timestamp
+    meta:
+      collection: action
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_updated
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 7
+      special:
+        - date-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_updated
+      table: action
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: action
+    field: id
+    type: integer
+    meta:
+      collection: action
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: action
+      data_type: integer
+      default_value: nextval('action_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: action
+    field: name
+    type: string
+    meta:
+      collection: action
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: create_product
+            value: create_product
+          - text: delete_product
+            value: delete_product
+          - text: came
+            value: came
+          - text: gone
+            value: gone
+          - text: add_product
+            value: add_product
+      readonly: false
+      required: false
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: action
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: action
+    field: sort
+    type: integer
+    meta:
+      collection: action
+      conditions: null
+      display: null
+      display_options: null
+      field: sort
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: sort
+      table: action
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: action
+    field: status
+    type: string
+    meta:
+      collection: action
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: $t:published
+            value: published
+            foreground: '#FFFFFF'
+            background: var(--primary)
+          - text: $t:draft
+            value: draft
+            foreground: '#18222F'
+            background: '#D3DAE4'
+          - text: $t:archived
+            value: archived
+            foreground: '#FFFFFF'
+            background: var(--warning)
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: $t:published
+            value: published
+          - text: $t:draft
+            value: draft
+          - text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: status
+      table: action
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: action
+    field: user_created
+    type: uuid
+    meta:
+      collection: action
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 4
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: action
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: action
+    field: user_updated
+    type: uuid
+    meta:
+      collection: action
+      conditions: null
+      display: user
+      display_options: null
+      field: user_updated
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 6
+      special:
+        - user-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_updated
+      table: action
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: directus_users
+    field: at_warehouse
+    type: boolean
+    meta:
+      collection: directus_users
+      conditions: null
+      display: null
+      display_options: null
+      field: at_warehouse
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: at_warehouse
+      table: directus_users
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: product
+    field: count
+    type: integer
+    meta:
+      collection: product
+      conditions: null
+      display: raw
+      display_options: null
+      field: count
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        min: 0
+      readonly: false
+      required: true
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: count
+      table: product
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: product
+    field: date_created
+    type: timestamp
+    meta:
+      collection: product
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 5
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: product
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: product
+    field: date_updated
+    type: timestamp
+    meta:
+      collection: product
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_updated
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 7
+      special:
+        - date-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_updated
+      table: product
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: product
+    field: description
+    type: string
+    meta:
+      collection: product
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: product
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: product
+    field: id
+    type: integer
+    meta:
+      collection: product
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: product
+      data_type: integer
+      default_value: nextval('product_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: product
+    field: image
+    type: uuid
+    meta:
+      collection: product
+      conditions: null
+      display: image
+      display_options: null
+      field: image
+      group: null
+      hidden: false
+      interface: file-image
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 9
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image
+      table: product
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: product
+    field: name
+    type: string
+    meta:
+      collection: product
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: product
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: product
+    field: sort
+    type: integer
+    meta:
+      collection: product
+      conditions: null
+      display: null
+      display_options: null
+      field: sort
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: sort
+      table: product
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: product
+    field: status
+    type: string
+    meta:
+      collection: product
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: $t:published
+            value: published
+            foreground: '#FFFFFF'
+            background: var(--primary)
+          - text: $t:draft
+            value: draft
+            foreground: '#18222F'
+            background: '#D3DAE4'
+          - text: $t:archived
+            value: archived
+            foreground: '#FFFFFF'
+            background: var(--warning)
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: $t:published
+            value: published
+          - text: $t:draft
+            value: draft
+          - text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: status
+      table: product
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: product
+    field: user_created
+    type: uuid
+    meta:
+      collection: product
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 4
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: product
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: product
+    field: user_updated
+    type: uuid
+    meta:
+      collection: product
+      conditions: null
+      display: user
+      display_options: null
+      field: user_updated
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 6
+      special:
+        - user-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_updated
+      table: product
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: product
+    field: warehouse
+    type: alias
+    meta:
+      collection: product
+      conditions: null
+      display: null
+      display_options: null
+      field: warehouse
+      group: null
+      hidden: false
+      interface: list-m2m
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 12
+      special:
+        - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: warehouse
+    field: date_created
+    type: timestamp
+    meta:
+      collection: warehouse
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 5
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: warehouse
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse
+    field: date_updated
+    type: timestamp
+    meta:
+      collection: warehouse
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_updated
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 7
+      special:
+        - date-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_updated
+      table: warehouse
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse
+    field: id
+    type: integer
+    meta:
+      collection: warehouse
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: warehouse
+      data_type: integer
+      default_value: nextval('warehouse_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse
+    field: name
+    type: string
+    meta:
+      collection: warehouse
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: warehouse
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse
+    field: products
+    type: alias
+    meta:
+      collection: warehouse
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{product_id.name}}{{product_id.image}}{{product_id.count}}{{id}}'
+      field: products
+      group: null
+      hidden: false
+      interface: list-m2m
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 9
+      special:
+        - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: warehouse
+    field: sort
+    type: integer
+    meta:
+      collection: warehouse
+      conditions: null
+      display: null
+      display_options: null
+      field: sort
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: sort
+      table: warehouse
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse
+    field: status
+    type: string
+    meta:
+      collection: warehouse
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: $t:published
+            value: published
+            foreground: '#FFFFFF'
+            background: var(--primary)
+          - text: $t:draft
+            value: draft
+            foreground: '#18222F'
+            background: '#D3DAE4'
+          - text: $t:archived
+            value: archived
+            foreground: '#FFFFFF'
+            background: var(--warning)
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: $t:published
+            value: published
+          - text: $t:draft
+            value: draft
+          - text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: status
+      table: warehouse
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse
+    field: user_created
+    type: uuid
+    meta:
+      collection: warehouse
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 4
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: warehouse
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: warehouse
+    field: user_updated
+    type: uuid
+    meta:
+      collection: warehouse
+      conditions: null
+      display: user
+      display_options: null
+      field: user_updated
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar.$thumbnail}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      sort: 6
+      special:
+        - user-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_updated
+      table: warehouse
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: warehouse
+    field: workers
+    type: alias
+    meta:
+      collection: warehouse
+      conditions: null
+      display: related-values
+      display_options: null
+      field: workers
+      group: null
+      hidden: false
+      interface: list-m2m
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 11
+      special:
+        - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: warehouse_directus_users
+    field: id
+    type: integer
+    meta:
+      collection: warehouse_directus_users
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: warehouse_directus_users
+      data_type: integer
+      default_value: nextval('warehouse_directus_users_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse_directus_users
+    field: warehouse_id
+    type: integer
+    meta:
+      collection: warehouse_directus_users
+      conditions: null
+      display: null
+      display_options: null
+      field: warehouse_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: warehouse_id
+      table: warehouse_directus_users
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: warehouse
+      foreign_key_column: id
+  - collection: warehouse_directus_users_1
+    field: directus_users_id
+    type: uuid
+    meta:
+      collection: warehouse_directus_users_1
+      conditions: null
+      display: null
+      display_options: null
+      field: directus_users_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: directus_users_id
+      table: warehouse_directus_users_1
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: warehouse_directus_users_1
+    field: id
+    type: integer
+    meta:
+      collection: warehouse_directus_users_1
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: warehouse_directus_users_1
+      data_type: integer
+      default_value: nextval('warehouse_directus_users_1_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse_directus_users_1
+    field: warehouse_id
+    type: integer
+    meta:
+      collection: warehouse_directus_users_1
+      conditions: null
+      display: null
+      display_options: null
+      field: warehouse_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: warehouse_id
+      table: warehouse_directus_users_1
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: warehouse
+      foreign_key_column: id
+  - collection: warehouse_directus_users_2
+    field: directus_users_id
+    type: uuid
+    meta:
+      collection: warehouse_directus_users_2
+      conditions: null
+      display: null
+      display_options: null
+      field: directus_users_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: directus_users_id
+      table: warehouse_directus_users_2
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_users
+      foreign_key_column: id
+  - collection: warehouse_directus_users_2
+    field: id
+    type: integer
+    meta:
+      collection: warehouse_directus_users_2
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: warehouse_directus_users_2
+      data_type: integer
+      default_value: nextval('warehouse_directus_users_2_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse_directus_users_2
+    field: warehouse_id
+    type: integer
+    meta:
+      collection: warehouse_directus_users_2
+      conditions: null
+      display: null
+      display_options: null
+      field: warehouse_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: warehouse_id
+      table: warehouse_directus_users_2
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: warehouse
+      foreign_key_column: id
+  - collection: warehouse_product
+    field: id
+    type: integer
+    meta:
+      collection: warehouse_product
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: warehouse_product
+      data_type: integer
+      default_value: nextval('warehouse_product_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: warehouse_product
+    field: product_id
+    type: integer
+    meta:
+      collection: warehouse_product
+      conditions: null
+      display: null
+      display_options: null
+      field: product_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: product_id
+      table: warehouse_product
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: product
+      foreign_key_column: id
+  - collection: warehouse_product
+    field: warehouse_id
+    type: integer
+    meta:
+      collection: warehouse_product
+      conditions: null
+      display: null
+      display_options: null
+      field: warehouse_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: warehouse_id
+      table: warehouse_product
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: warehouse
+      foreign_key_column: id
+relations:
+  - collection: action
+    field: user_created
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: action
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: action
+      column: user_created
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: action_user_created_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: action
+    field: user_updated
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: action
+      many_field: user_updated
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: action
+      column: user_updated
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: action_user_updated_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: product
+    field: image
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: product
+      many_field: image
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: product
+      column: image
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: product_image_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: product
+    field: user_created
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: product
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: product
+      column: user_created
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: product_user_created_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: product
+    field: user_updated
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: product
+      many_field: user_updated
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: product
+      column: user_updated
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: product_user_updated_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: warehouse
+    field: user_created
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: warehouse
+      many_field: user_created
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: warehouse
+      column: user_created
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: warehouse_user_created_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: warehouse
+    field: user_updated
+    related_collection: directus_users
+    meta:
+      junction_field: null
+      many_collection: warehouse
+      many_field: user_updated
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: warehouse
+      column: user_updated
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: warehouse_user_updated_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: warehouse_directus_users
+    field: warehouse_id
+    related_collection: warehouse
+    meta:
+      junction_field: directus_users_id
+      many_collection: warehouse_directus_users
+      many_field: warehouse_id
+      one_allowed_collections: null
+      one_collection: warehouse
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: warehouse_directus_users
+      column: warehouse_id
+      foreign_key_table: warehouse
+      foreign_key_column: id
+      constraint_name: warehouse_directus_users_warehouse_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: warehouse_directus_users_1
+    field: directus_users_id
+    related_collection: directus_users
+    meta:
+      junction_field: warehouse_id
+      many_collection: warehouse_directus_users_1
+      many_field: directus_users_id
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: warehouse_directus_users_1
+      column: directus_users_id
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: warehouse_directus_users_1_directus_users_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: warehouse_directus_users_1
+    field: warehouse_id
+    related_collection: warehouse
+    meta:
+      junction_field: directus_users_id
+      many_collection: warehouse_directus_users_1
+      many_field: warehouse_id
+      one_allowed_collections: null
+      one_collection: warehouse
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: warehouse_directus_users_1
+      column: warehouse_id
+      foreign_key_table: warehouse
+      foreign_key_column: id
+      constraint_name: warehouse_directus_users_1_warehouse_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: warehouse_directus_users_2
+    field: directus_users_id
+    related_collection: directus_users
+    meta:
+      junction_field: warehouse_id
+      many_collection: warehouse_directus_users_2
+      many_field: directus_users_id
+      one_allowed_collections: null
+      one_collection: directus_users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: warehouse_directus_users_2
+      column: directus_users_id
+      foreign_key_table: directus_users
+      foreign_key_column: id
+      constraint_name: warehouse_directus_users_2_directus_users_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: warehouse_directus_users_2
+    field: warehouse_id
+    related_collection: warehouse
+    meta:
+      junction_field: directus_users_id
+      many_collection: warehouse_directus_users_2
+      many_field: warehouse_id
+      one_allowed_collections: null
+      one_collection: warehouse
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: workers
+      sort_field: null
+    schema:
+      table: warehouse_directus_users_2
+      column: warehouse_id
+      foreign_key_table: warehouse
+      foreign_key_column: id
+      constraint_name: warehouse_directus_users_2_warehouse_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: warehouse_product
+    field: product_id
+    related_collection: product
+    meta:
+      junction_field: warehouse_id
+      many_collection: warehouse_product
+      many_field: product_id
+      one_allowed_collections: null
+      one_collection: product
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: warehouse
+      sort_field: null
+    schema:
+      table: warehouse_product
+      column: product_id
+      foreign_key_table: product
+      foreign_key_column: id
+      constraint_name: warehouse_product_product_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: warehouse_product
+    field: warehouse_id
+    related_collection: warehouse
+    meta:
+      junction_field: product_id
+      many_collection: warehouse_product
+      many_field: warehouse_id
+      one_allowed_collections: null
+      one_collection: warehouse
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: products
+      sort_field: null
+    schema:
+      table: warehouse_product
+      column: warehouse_id
+      foreign_key_table: warehouse
+      foreign_key_column: id
+      constraint_name: warehouse_product_warehouse_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+data:
+  action: {}
+  product:
+    '1':
+      id: 1
+      status: draft
+      sort: null
+      user_created: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      date_created: '2024-03-04T18:55:32.098Z'
+      user_updated: null
+      date_updated: null
+      name: peacock
+      image: 9e0cbebd-9591-4721-8b01-76058b1ccd33
+      description: default peacock
+      count: 6
+  warehouse:
+    '1':
+      id: 1
+      status: draft
+      sort: null
+      user_created: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      date_created: '2024-03-04T18:54:31.171Z'
+      user_updated: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      date_updated: '2024-03-09T08:39:10.875Z'
+      name: склад 1
+  warehouse_directus_users:
+    '1':
+      id: 1
+      warehouse_id: 1
+  warehouse_directus_users_1: {}
+  warehouse_directus_users_2:
+    '1':
+      id: 1
+      warehouse_id: 1
+      directus_users_id: null
+  warehouse_product:
+    '1':
+      id: 1
+      warehouse_id: 1
+      product_id: 1
+  directus_files:
+    9e0cbebd-9591-4721-8b01-76058b1ccd33:
+      id: 9e0cbebd-9591-4721-8b01-76058b1ccd33
+      storage: local
+      filename_disk: 9e0cbebd-9591-4721-8b01-76058b1ccd33.png
+      filename_download: Screenshot_1.png
+      title: Screenshot 1
+      type: image/png
+      folder: null
+      uploaded_by: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      uploaded_on: '2024-03-04T18:55:08.295Z'
+      modified_by: null
+      modified_on: '2024-03-09T08:36:55.762Z'
+      charset: null
+      filesize: '179244'
+      width: 408
+      height: 298
+      duration: null
+      embed: null
+      description: null
+      location: null
+      tags: null
+      metadata: {}
+    404b54a5-e150-425a-8820-53b4e9f39e7f:
+      id: 404b54a5-e150-425a-8820-53b4e9f39e7f
+      storage: local
+      filename_disk: 404b54a5-e150-425a-8820-53b4e9f39e7f.jpg
+      filename_download: >-
+        dub-na-kurinykh-nogakh-samaja-skandalnaja-pobeda-shvarceneggera_1443951201412453589.jpg
+      title: >-
+        Dub Na Kurinykh Nogakh Samaja Skandalnaja Pobeda Shvarceneggera
+        1443951201412453589
+      type: image/jpeg
+      folder: null
+      uploaded_by: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      uploaded_on: '2024-03-04T18:57:58.902Z'
+      modified_by: null
+      modified_on: '2024-03-09T08:36:55.778Z'
+      charset: null
+      filesize: '110708'
+      width: 653
+      height: 490
+      duration: null
+      embed: null
+      description: null
+      location: null
+      tags: null
+      metadata: {}
+    64811ed0-37b9-474b-92e0-3bbb4611788a:
+      id: 64811ed0-37b9-474b-92e0-3bbb4611788a
+      storage: local
+      filename_disk: 64811ed0-37b9-474b-92e0-3bbb4611788a.jpg
+      filename_download: >-
+        dub-na-kurinykh-nogakh-samaja-skandalnaja-pobeda-shvarceneggera_1443951201412453589.jpg
+      title: >-
+        Dub Na Kurinykh Nogakh Samaja Skandalnaja Pobeda Shvarceneggera
+        1443951201412453589
+      type: image/jpeg
+      folder: null
+      uploaded_by: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      uploaded_on: '2024-03-09T08:41:22.238Z'
+      modified_by: null
+      modified_on: '2024-03-09T08:41:22.292Z'
+      charset: null
+      filesize: '110708'
+      width: 653
+      height: 490
+      duration: null
+      embed: null
+      description: null
+      location: null
+      tags: null
+      metadata: {}
+  directus_folders: {}
+  directus_migrations:
+    20201028A:
+      version: 20201028A
+      name: Remove Collection Foreign Keys
+      timestamp: '2023-09-13T09:43:06.601Z'
+    20201029A:
+      version: 20201029A
+      name: Remove System Relations
+      timestamp: '2023-09-13T09:43:06.612Z'
+    20201029B:
+      version: 20201029B
+      name: Remove System Collections
+      timestamp: '2023-09-13T09:43:06.617Z'
+    20201029C:
+      version: 20201029C
+      name: Remove System Fields
+      timestamp: '2023-09-13T09:43:06.628Z'
+    20201105A:
+      version: 20201105A
+      name: Add Cascade System Relations
+      timestamp: '2023-09-13T09:43:06.720Z'
+    20201105B:
+      version: 20201105B
+      name: Change Webhook URL Type
+      timestamp: '2023-09-13T09:43:06.728Z'
+    20210225A:
+      version: 20210225A
+      name: Add Relations Sort Field
+      timestamp: '2023-09-13T09:43:06.737Z'
+    20210304A:
+      version: 20210304A
+      name: Remove Locked Fields
+      timestamp: '2023-09-13T09:43:06.743Z'
+    20210312A:
+      version: 20210312A
+      name: Webhooks Collections Text
+      timestamp: '2023-09-13T09:43:06.751Z'
+    20210331A:
+      version: 20210331A
+      name: Add Refresh Interval
+      timestamp: '2023-09-13T09:43:06.756Z'
+    20210415A:
+      version: 20210415A
+      name: Make Filesize Nullable
+      timestamp: '2023-09-13T09:43:06.768Z'
+    20210416A:
+      version: 20210416A
+      name: Add Collections Accountability
+      timestamp: '2023-09-13T09:43:06.777Z'
+    20210422A:
+      version: 20210422A
+      name: Remove Files Interface
+      timestamp: '2023-09-13T09:43:06.783Z'
+    20210506A:
+      version: 20210506A
+      name: Rename Interfaces
+      timestamp: '2023-09-13T09:43:06.820Z'
+    20210510A:
+      version: 20210510A
+      name: Restructure Relations
+      timestamp: '2023-09-13T09:43:06.866Z'
+    20210518A:
+      version: 20210518A
+      name: Add Foreign Key Constraints
+      timestamp: '2023-09-13T09:43:06.891Z'
+    20210519A:
+      version: 20210519A
+      name: Add System Fk Triggers
+      timestamp: '2023-09-13T09:43:06.949Z'
+    20210521A:
+      version: 20210521A
+      name: Add Collections Icon Color
+      timestamp: '2023-09-13T09:43:06.953Z'
+    20210525A:
+      version: 20210525A
+      name: Add Insights
+      timestamp: '2023-09-13T09:43:06.994Z'
+    20210608A:
+      version: 20210608A
+      name: Add Deep Clone Config
+      timestamp: '2023-09-13T09:43:06.999Z'
+    20210626A:
+      version: 20210626A
+      name: Change Filesize Bigint
+      timestamp: '2023-09-13T09:43:07.022Z'
+    20210716A:
+      version: 20210716A
+      name: Add Conditions to Fields
+      timestamp: '2023-09-13T09:43:07.026Z'
+    20210721A:
+      version: 20210721A
+      name: Add Default Folder
+      timestamp: '2023-09-13T09:43:07.037Z'
+    20210802A:
+      version: 20210802A
+      name: Replace Groups
+      timestamp: '2023-09-13T09:43:07.045Z'
+    20210803A:
+      version: 20210803A
+      name: Add Required to Fields
+      timestamp: '2023-09-13T09:43:07.050Z'
+    20210805A:
+      version: 20210805A
+      name: Update Groups
+      timestamp: '2023-09-13T09:43:07.056Z'
+    20210805B:
+      version: 20210805B
+      name: Change Image Metadata Structure
+      timestamp: '2023-09-13T09:43:07.062Z'
+    20210811A:
+      version: 20210811A
+      name: Add Geometry Config
+      timestamp: '2023-09-13T09:43:07.067Z'
+    20210831A:
+      version: 20210831A
+      name: Remove Limit Column
+      timestamp: '2023-09-13T09:43:07.071Z'
+    20210903A:
+      version: 20210903A
+      name: Add Auth Provider
+      timestamp: '2023-09-13T09:43:07.095Z'
+    20210907A:
+      version: 20210907A
+      name: Webhooks Collections Not Null
+      timestamp: '2023-09-13T09:43:07.101Z'
+    20210910A:
+      version: 20210910A
+      name: Move Module Setup
+      timestamp: '2023-09-13T09:43:07.106Z'
+    20210920A:
+      version: 20210920A
+      name: Webhooks URL Not Null
+      timestamp: '2023-09-13T09:43:07.113Z'
+    20210924A:
+      version: 20210924A
+      name: Add Collection Organization
+      timestamp: '2023-09-13T09:43:07.123Z'
+    20210927A:
+      version: 20210927A
+      name: Replace Fields Group
+      timestamp: '2023-09-13T09:43:07.135Z'
+    20210927B:
+      version: 20210927B
+      name: Replace M2M Interface
+      timestamp: '2023-09-13T09:43:07.140Z'
+    20210929A:
+      version: 20210929A
+      name: Rename Login Action
+      timestamp: '2023-09-13T09:43:07.143Z'
+    20211007A:
+      version: 20211007A
+      name: Update Presets
+      timestamp: '2023-09-13T09:43:07.151Z'
+    20211009A:
+      version: 20211009A
+      name: Add Auth Data
+      timestamp: '2023-09-13T09:43:07.155Z'
+    20211016A:
+      version: 20211016A
+      name: Add Webhook Headers
+      timestamp: '2023-09-13T09:43:07.160Z'
+    20211103A:
+      version: 20211103A
+      name: Set Unique to User Token
+      timestamp: '2023-09-13T09:43:07.167Z'
+    20211103B:
+      version: 20211103B
+      name: Update Special Geometry
+      timestamp: '2023-09-13T09:43:07.172Z'
+    20211104A:
+      version: 20211104A
+      name: Remove Collections Listing
+      timestamp: '2023-09-13T09:43:07.176Z'
+    20211118A:
+      version: 20211118A
+      name: Add Notifications
+      timestamp: '2023-09-13T09:43:07.212Z'
+    20211211A:
+      version: 20211211A
+      name: Add Shares
+      timestamp: '2023-09-13T09:43:07.251Z'
+    20211230A:
+      version: 20211230A
+      name: Add Project Descriptor
+      timestamp: '2023-09-13T09:43:07.255Z'
+    20220429A:
+      version: 20220429A
+      name: Add Flows
+      timestamp: '2023-09-13T09:43:07.383Z'
+    20220303A:
+      version: 20220303A
+      name: Remove Default Project Color
+      timestamp: '2023-09-13T09:43:07.262Z'
+    20220308A:
+      version: 20220308A
+      name: Add Bookmark Icon and Color
+      timestamp: '2023-09-13T09:43:07.266Z'
+    20220314A:
+      version: 20220314A
+      name: Add Translation Strings
+      timestamp: '2023-09-13T09:43:07.269Z'
+    20220322A:
+      version: 20220322A
+      name: Rename Field Typecast Flags
+      timestamp: '2023-09-13T09:43:07.274Z'
+    20220323A:
+      version: 20220323A
+      name: Add Field Validation
+      timestamp: '2023-09-13T09:43:07.277Z'
+    20220325A:
+      version: 20220325A
+      name: Fix Typecast Flags
+      timestamp: '2023-09-13T09:43:07.280Z'
+    20220325B:
+      version: 20220325B
+      name: Add Default Language
+      timestamp: '2023-09-13T09:43:07.290Z'
+    20220402A:
+      version: 20220402A
+      name: Remove Default Value Panel Icon
+      timestamp: '2023-09-13T09:43:07.298Z'
+    20220429B:
+      version: 20220429B
+      name: Add Color to Insights Icon
+      timestamp: '2023-09-13T09:43:07.387Z'
+    20220429C:
+      version: 20220429C
+      name: Drop Non Null From IP of Activity
+      timestamp: '2023-09-13T09:43:07.391Z'
+    20220429D:
+      version: 20220429D
+      name: Drop Non Null From Sender of Notifications
+      timestamp: '2023-09-13T09:43:07.395Z'
+    20220614A:
+      version: 20220614A
+      name: Rename Hook Trigger to Event
+      timestamp: '2023-09-13T09:43:07.399Z'
+    20220801A:
+      version: 20220801A
+      name: Update Notifications Timestamp Column
+      timestamp: '2023-09-13T09:43:07.405Z'
+    20220802A:
+      version: 20220802A
+      name: Add Custom Aspect Ratios
+      timestamp: '2023-09-13T09:43:07.408Z'
+    20220826A:
+      version: 20220826A
+      name: Add Origin to Accountability
+      timestamp: '2023-09-13T09:43:07.411Z'
+    20230401A:
+      version: 20230401A
+      name: Update Material Icons
+      timestamp: '2023-09-13T09:43:07.419Z'
+    20230525A:
+      version: 20230525A
+      name: Add Preview Settings
+      timestamp: '2023-09-13T09:43:07.422Z'
+    20230526A:
+      version: 20230526A
+      name: Migrate Translation Strings
+      timestamp: '2023-09-13T09:43:07.459Z'
+    20230721A:
+      version: 20230721A
+      name: Require Shares Fields
+      timestamp: '2023-09-13T09:43:07.464Z'
+  directus_permissions:
+    '1':
+      id: 1
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_files
+      action: create
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '2':
+      id: 2
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_files
+      action: read
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '3':
+      id: 3
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_files
+      action: update
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '4':
+      id: 4
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_files
+      action: delete
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '5':
+      id: 5
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_dashboards
+      action: create
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '6':
+      id: 6
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_dashboards
+      action: read
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '7':
+      id: 7
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_dashboards
+      action: update
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '8':
+      id: 8
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_dashboards
+      action: delete
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '9':
+      id: 9
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_panels
+      action: create
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '10':
+      id: 10
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_panels
+      action: read
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '11':
+      id: 11
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_panels
+      action: update
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '12':
+      id: 12
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_panels
+      action: delete
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '13':
+      id: 13
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_folders
+      action: create
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '14':
+      id: 14
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_folders
+      action: read
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '15':
+      id: 15
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_folders
+      action: update
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '16':
+      id: 16
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_folders
+      action: delete
+      permissions: {}
+      validation: null
+      presets: null
+      fields: null
+    '17':
+      id: 17
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_users
+      action: read
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '18':
+      id: 18
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_users
+      action: update
+      permissions:
+        id:
+          _eq: $CURRENT_USER
+      validation: null
+      presets: null
+      fields: >-
+        first_name,last_name,email,password,location,title,description,avatar,language,theme,tfa_secret
+    '19':
+      id: 19
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_roles
+      action: read
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '20':
+      id: 20
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_shares
+      action: read
+      permissions:
+        _or:
+          - role:
+              _eq: $CURRENT_ROLE
+          - role:
+              _null: true
+      validation: null
+      presets: null
+      fields: '*'
+    '21':
+      id: 21
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_shares
+      action: create
+      permissions: {}
+      validation: null
+      presets: null
+      fields: '*'
+    '22':
+      id: 22
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_shares
+      action: update
+      permissions:
+        user_created:
+          _eq: $CURRENT_USER
+      validation: null
+      presets: null
+      fields: '*'
+    '23':
+      id: 23
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_shares
+      action: delete
+      permissions:
+        user_created:
+          _eq: $CURRENT_USER
+      validation: null
+      presets: null
+      fields: '*'
+    '24':
+      id: 24
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: directus_flows
+      action: read
+      permissions:
+        trigger:
+          _eq: manual
+      validation: null
+      presets: null
+      fields: id,status,name,icon,color,options,trigger
+    '25':
+      id: 25
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: product
+      action: create
+      permissions: {}
+      validation: {}
+      presets: null
+      fields: '*'
+    '26':
+      id: 26
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: product
+      action: read
+      permissions: {}
+      validation: {}
+      presets: null
+      fields: '*'
+    '27':
+      id: 27
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: product
+      action: update
+      permissions: {}
+      validation: {}
+      presets: null
+      fields: '*'
+    '28':
+      id: 28
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: product
+      action: delete
+      permissions: {}
+      validation: {}
+      presets: null
+      fields: '*'
+    '29':
+      id: 29
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      collection: product
+      action: share
+      permissions: {}
+      validation: {}
+      presets: null
+      fields: '*'
+  directus_presets:
+    '1':
+      id: 1
+      bookmark: null
+      user: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      role: null
+      collection: directus_users
+      search: null
+      layout: cards
+      layout_query:
+        cards:
+          sort:
+            - email
+          limit: 25
+      layout_options:
+        cards:
+          icon: account_circle
+          title: '{{ first_name }} {{ last_name }}'
+          subtitle: '{{ email }}'
+          size: 4
+      refresh_interval: null
+      filter: null
+      icon: bookmark
+      color: null
+    '2':
+      id: 2
+      bookmark: null
+      user: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      role: null
+      collection: directus_files
+      search: null
+      layout: cards
+      layout_query:
+        cards:
+          sort:
+            - '-uploaded_on'
+          limit: 25
+      layout_options:
+        cards:
+          icon: insert_drive_file
+          title: '{{ title }}'
+          subtitle: '{{ type }} • {{ filesize }}'
+          size: 4
+          imageFit: crop
+      refresh_interval: null
+      filter: null
+      icon: bookmark
+      color: null
+    '3':
+      id: 3
+      bookmark: null
+      user: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      role: null
+      collection: action
+      search: null
+      layout: null
+      layout_query:
+        tabular:
+          limit: 25
+      layout_options: null
+      refresh_interval: null
+      filter: null
+      icon: bookmark
+      color: null
+    '4':
+      id: 4
+      bookmark: null
+      user: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      role: null
+      collection: warehouse
+      search: null
+      layout: null
+      layout_query:
+        tabular:
+          limit: 25
+      layout_options: null
+      refresh_interval: null
+      filter: null
+      icon: bookmark
+      color: null
+    '5':
+      id: 5
+      bookmark: null
+      user: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      role: null
+      collection: product
+      search: null
+      layout: null
+      layout_query:
+        tabular:
+          limit: 25
+          fields:
+            - name
+            - image
+            - count
+            - description
+            - status
+      layout_options:
+        tabular:
+          widths: {}
+      refresh_interval: null
+      filter: null
+      icon: bookmark
+      color: null
+  directus_roles:
+    66b1450b-3237-4eaf-9285-89441f00855c:
+      id: 66b1450b-3237-4eaf-9285-89441f00855c
+      name: Administrator
+      icon: verified
+      description: $t:admin_description
+      ip_access: null
+      enforce_tfa: false
+      admin_access: true
+      app_access: true
+    bd7d257c-471f-451f-9105-a18621b3b13d:
+      id: bd7d257c-471f-451f-9105-a18621b3b13d
+      name: worker
+      icon: supervised_user_circle
+      description: null
+      ip_access: null
+      enforce_tfa: false
+      admin_access: false
+      app_access: true
+  directus_sessions:
+    93jLuixrxIxeFWpYvxQzLSQMs4XW_9Bn6Asm33D8taNVIzORbsMioetpYLj6Abz0:
+      token: 93jLuixrxIxeFWpYvxQzLSQMs4XW_9Bn6Asm33D8taNVIzORbsMioetpYLj6Abz0
+      user: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      expires: '2024-03-11T18:48:11.292Z'
+      ip: 172.19.0.1
+      user_agent: >-
+        Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/122.0.0.0 Safari/537.36
+      share: null
+      origin: http://127.0.0.1:3010
+    BGNVV9MhC8q586g1v15kYh7dr4BAKfFHOEhk0_0NhLl91eQmmraEGHsWOped9mjb:
+      token: BGNVV9MhC8q586g1v15kYh7dr4BAKfFHOEhk0_0NhLl91eQmmraEGHsWOped9mjb
+      user: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      expires: '2024-03-16T08:37:06.542Z'
+      ip: 172.19.0.1
+      user_agent: >-
+        Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/122.0.0.0 Safari/537.36
+      share: null
+      origin: http://127.0.0.1:3010
+  directus_settings:
+    '1':
+      id: 1
+      project_name: Directus
+      project_url: null
+      project_color: null
+      project_logo: null
+      public_foreground: null
+      public_background: null
+      public_note: null
+      auth_login_attempts: 25
+      auth_password_policy: null
+      storage_asset_transform: all
+      storage_asset_presets: null
+      custom_css: null
+      storage_default_folder: null
+      basemaps: null
+      mapbox_key: null
+      module_bar: null
+      project_descriptor: null
+      default_language: uk-UA
+      custom_aspect_ratios: null
+  directus_users:
+    aad1048b-efae-4392-8a56-44f53bc66a2f:
+      id: aad1048b-efae-4392-8a56-44f53bc66a2f
+      first_name: Denis
+      last_name: Denis
+      email: Denis@Denis/Denis
+      password: >-
+        $argon2id$v=19$m=65536,t=3,p=4$WkInxvEXJAfqKxX33tzNWg$2N0d6n3EL5oQLeBtfF8Xt6nBV2BavGECjjlp+u5b2T0
+      location: null
+      title: null
+      description: null
+      tags: null
+      avatar: 64811ed0-37b9-474b-92e0-3bbb4611788a
+      language: null
+      theme: auto
+      tfa_secret: null
+      status: active
+      role: bd7d257c-471f-451f-9105-a18621b3b13d
+      token: null
+      last_access: null
+      last_page: null
+      provider: default
+      external_identifier: null
+      auth_data: null
+      email_notifications: true
+      at_warehouse: true
+    ac594ab3-d6f1-4ad1-8535-05207df56d37:
+      id: ac594ab3-d6f1-4ad1-8535-05207df56d37
+      first_name: Admin
+      last_name: User
+      email: admin@directus.com
+      password: >-
+        $argon2id$v=19$m=65536,t=3,p=4$Ukc8pZdLz/k0/eGZqRjxzQ$yLVla0+Mn4+Mew2wTdDdzVaDgAFaWMU1XY0maR7NAE8
+      location: null
+      title: null
+      description: null
+      tags: null
+      avatar: null
+      language: null
+      theme: auto
+      tfa_secret: null
+      status: active
+      role: 66b1450b-3237-4eaf-9285-89441f00855c
+      token: null
+      last_access: '2024-03-09T08:37:06.556Z'
+      last_page: /settings/data-model/directus_users
+      provider: default
+      external_identifier: null
+      auth_data: null
+      email_notifications: true
+      at_warehouse: null
+  directus_webhooks: {}
+  directus_dashboards: {}
+  directus_panels: {}
+  directus_notifications: {}
+  directus_shares: {}
+  directus_flows: {}
+  directus_operations: {}
+  directus_translations: {}

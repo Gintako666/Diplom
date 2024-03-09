@@ -1,0 +1,42 @@
+{
+  "editor.language.brackets": [],
+  "files.autoSave": "afterDelay",
+  "editor.tabSize": 2,
+  "eslint.workingDirectories": ["./front", "./"],
+  "editor.renderWhitespace": "boundary",
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "eslint.format.enable": true,
+  "eslint.nodePath": "./front/.eslintrc.json",
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "stylelint.vscode-stylelint",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "workbench.editorAssociations": {
+    "*.ibd": "default"
+  },
+  "terminal.integrated.env.windows": {},
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
+}
